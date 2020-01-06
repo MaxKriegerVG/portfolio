@@ -1,0 +1,531 @@
+@import url(https://indestructibletype.com/fonts/Jost.css);
+/* @import url('https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap) */
+
+/*! PhotoSwipe main CSS by Dmitry Semenov | photoswipe.com | MIT license */
+/*
+	Styles for basic PhotoSwipe functionality (sliding area, open/close transitions)
+*/
+/* pswp = photoswipe */
+
+html,body {
+    margin:0;
+    padding:0;
+}
+
+body.mainPage {
+  background: url("shapebgd.jpg") 0 0 repeat;
+  background-size: 21vmax;
+}
+
+body.subPage{
+  background: url("bgd-reduced.jpg") 0 0 repeat;
+  background-size: 5vmax;
+}
+
+.headerSawtooth {
+    background-color: #f92246;
+	background-image:
+    linear-gradient(45deg, rgba(255,255,255,1) 25%, rgba(255,255,255,0) 25%),
+    linear-gradient(-45deg, rgba(255,255,255,1) 25%, rgba(255,255,255,0) 25%);
+	    background-position:
+        /* Top jagged */
+        bottom center, bottom center;
+    background-size:
+        /* Top + bottom jagged */
+		2rem 2rem, 2rem 2rem;
+    background-repeat: repeat-x;
+    margin: 0 0 3rem;
+    padding: 0 0 1rem 0;
+    position: relative;
+  }
+  
+    .footerSawtooth {
+    background-color: #b4569d;
+	background-image:
+    /* Top jagged */
+		linear-gradient(135deg, rgba(255,255,255,1) 25%, rgba(255,255,255,0) 25%),
+		linear-gradient(-135deg, rgba(255,255,255,1) 25%, rgba(255,255,255,0) 25%);
+	    background-position:
+        /* Top jagged */
+        top center, top center;
+    background-size:
+        /* Top + bottom jagged */
+        2rem 2rem, 2rem 2rem;
+    background-repeat: repeat-x;
+    margin: 0 0 0;
+	margin-bottom:0;
+	margin-top: 4rem;
+    padding: .1rem 0 1rem 0;
+    position: relative;
+  }
+  
+#headerGreen{
+	background-color: #4ec285;
+}
+
+#headerOrange{
+	background-color: #ff8500;
+}
+
+#headerBlue{
+	background-color: #5565b5;
+}
+  
+h1.bold-white{
+	margin:0;
+    padding:0;
+	letter-spacing: 1vw;
+	text-align: center;
+	font-family: Jost;
+	color: white;
+	font-size: 3.5rem;
+	line-height: 1em;
+	overflow: hidden;
+	  transform: scale(1, .825);
+	-webkit-transform: scale(1, .825); /* Safari and Chrome */
+	-moz-transform: scale(1, .825); /* Firefox */
+	-ms-transform: scale(1, .825); /* IE 9+ */
+	-o-transform: scale(1, .825); /* Opera */
+}
+
+h2.bold-white{
+	margin-bottom: 0;
+	padding-bottom: 0;
+	letter-spacing: 1vw;
+	text-align: center;
+	font-family: Jost;
+	color: white;
+	font-size: 3rem;
+	  transform: scale(1, .825);
+	-webkit-transform: scale(1, .825); /* Safari and Chrome */
+	-moz-transform: scale(1, .825); /* Firefox */
+	-ms-transform: scale(1, .825); /* IE 9+ */
+	-o-transform: scale(1, .825); /* Opera */
+}
+
+h6.bold-white{
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	font-family: Jost;
+	color: white;
+	font-size: 1.5rem;
+}
+
+p.bold-white{
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	font-family: Jost;
+	color: white;
+	font-size: 1.5rem;
+}
+
+a{
+	color: white;
+}
+
+.flex-container{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: center;
+	
+}
+
+.flex-image{
+	width: 22em;
+	align-self: center;
+	overflow: hidden;
+}
+
+.flex-text{
+	flex-basis: auto;
+	font-family: Jost;
+	color: white;
+	
+	margin: 1vw;
+	text-align: right;
+	max-width: 20em;
+}
+
+.flex-meta-center{
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.flex-image-grid{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: center;
+	max-width: 80%;
+}
+
+.flex-image-grid-container{
+	display: inline-flex;
+	position: relative;
+	border-radius: 50%;
+}
+
+#greenshadowoutline{
+	border-style: solid;
+	border-color: #4ec285;
+	box-shadow: 10px 10px #4ec285;
+}
+
+#yellowshadowoutline{
+	border-style: solid;
+	border-color: #ff8500;
+	box-shadow: 10px 10px #ff8500;
+}
+
+#blueshadowoutline{
+	border-style: solid;
+	border-color: #5565b5;
+	box-shadow: 10px 10px #5565b5;
+}
+
+
+.flex-circle-image{
+	transition: .5s;
+	margin: 2rem;
+	width: 16rem;
+	border-radius: 47%;
+	padding: .5rem;
+}
+
+.flex-screenshot-thumbnail{
+	margin: 1rem;
+	width: 31rem;
+	padding: .1rem;
+	border: solid 1px gray;
+	border-radius: 5%;
+	max-width: 90vw;
+	      /* box-shadow: .5rem .5rem 0 rgba(128,128,128,.1); */
+      /* -moz-box-shadow: .5rem .5rem 0 rgba(128,128,128,.1); */
+      /* -webkit-box-shadow: .5rem .5rem 0 rgba(128,128,128,.1); */
+      /* -khtml-box-shadow: .5rem .5rem 0 rgba(128,128,128,.1); */
+}
+
+#about-images{
+	margin-left: 1rem;
+	margin-right: 1rem;
+}
+
+@media (hover : none){
+.centeredText {
+	  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently*/
+	font-weight: 700;
+    display: inline-block;
+    font-size: 2em;
+	font-family: Jost;
+    color: 	white;
+	text-shadow: 2px 2px gray;
+    position: absolute;               /* remove from document flow */
+    left: 50%;                        /* center horizontally */
+    top: 50%;                         /* center vertically */
+    transform: translate(-50%,-50%);   /* tweak for precise centering; details:*/
+	opacity: 1;
+	line-height: 1em;
+	text-align: center;
+}	
+
+#offwhite{
+	color: black;
+}
+}
+
+@media not all and (hover: none){
+	
+.centeredText {
+	pointer-events:none;
+	  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently*/
+	transition: .5s;
+	font-weight: 700;
+    display: inline-block;
+    font-size: 2em;
+	font-family: Jost;
+    color: 	white;
+	text-shadow: 2px 2px gray;
+    position: absolute;               /* remove from document flow */
+    left: 50%;                        /* center horizontally */
+    top: 50%;                         /* center vertically */
+    transform: translate(-50%,-50%);   /* tweak for precise centering; details:*/
+	opacity: 0;
+	text-align: center;
+	line-height: 1em;
+}	
+
+#offwhite{
+	color: black;
+}
+	
+.flex-image-grid-container:hover > .centeredText {
+	opacity: 1;
+	}
+	
+.flex-circle-image:hover{
+	opacity: .666666;
+}
+}
+
+
+
+.flex-image-grid-overlay {
+	display: block;
+	text-align: center;
+	position: static;
+  width: 100%;
+  height: auto;
+  opacity: 1;
+  /* transition: .5s ease; */
+  background-color: #008CBA;
+}
+
+.container:hover .flex-image-grid-overlay {
+  opacity: 1;
+}
+
+#textshadowred{
+		text-shadow: .1em .1em #b01932;
+}
+
+#textshadowpurple{
+		text-shadow: .1em .1em #b01932;
+}
+
+#textshadowgreen{
+	text-shadow: .1em .1em #387385;
+}
+
+#textshadoworange{
+	text-shadow: .1em .1em #bd3c3c;
+}
+
+#textshadowblue{
+	text-shadow: .1em .1em #854078;
+}
+
+
+/** LIGHTBOX MARKUP **/
+
+.lightbox {
+	/** Default lightbox to hidden */
+	display: block;
+	visibility: hidden;
+
+	/** Position and style */
+	position: fixed;
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+}
+
+.lightbox-image {
+	/** Pad the lightbox image */
+	max-width: 90%;
+	max-height: 80%;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.lightbox:target {
+	/** Remove default browser outline */
+	outline: none;
+	
+	visibility: visible;
+}
+
+ @media all and (orientation:portrait){
+	 
+	 .portrait-title-and-info-container{
+		 display: none;
+	 }
+	 
+	 .landscape-title-and-info-container{
+		 display: block;
+		 margin-left: 1rem;
+		 margin-right: 1rem;
+	 }
+	 
+	 .vertical-only-page-title{
+	text-align: center;
+	font-family: Jost;
+	text-shadow: .2rem .2rem gray;
+	font-size: 3vmax;
+	  transform: scale(1, .825);
+	-webkit-transform: scale(1, .825); /* Safari and Chrome */
+	-moz-transform: scale(1, .825); /* Firefox */
+	-ms-transform: scale(1, .825); /* IE 9+ */
+	-o-transform: scale(1, .825); /* Opera */
+
+	}
+ }
+ 
+  @media all and (orientation:landscape){
+	 .vertical-only-page-title{
+		 display: none;
+	}
+	
+	.portrait-title-and-info-container{
+		 display: block;
+	 }
+	 
+	 .landscape-title-and-info-container{
+		 display: none;
+	 }
+	 
+ }
+
+ 
+.flex-shape-divider-container{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: center;
+}
+
+.flex-shape-divider-circle{
+	text-align: center;
+	background-color: #b4569d;
+	height: 1rem;
+	width: 1rem;
+	border-radius: 50%;
+	margin-top: .75rem;
+	margin-bottom: .75rem;
+}
+
+.flex-shape-divider-triangle{
+	width: 0;
+	height: 0;
+	border-left: 1rem solid transparent;
+	border-right: 1rem solid transparent;
+	border-bottom: 1.5rem solid #b4569d;
+	margin-bottom: .75rem;
+}
+
+.flex-title-and-info-textbox{
+	margin-right: 1rem;
+	flex-basis: auto;
+	text-align: right;
+	font-family: Jost;
+	color: black;
+	font-size: 2vmax;
+}
+
+.flex-spacer-box-left{
+	width: 45vw;
+	text-align: right;
+	padding: 0;
+}
+
+.flex-spacer-box-right{
+	width: 45vw;
+	text-align: left;
+	padding: 0;
+}
+
+.flex-description-textbox{
+		margin-left: 1rem;
+	flex-basis: auto;
+	text-align: left;
+	font-family: Jost;
+	color: black;
+	font-size: 2vmax;
+	max-width: 81%;
+}
+
+#textGreen{
+	color: #4ec285;
+}
+
+#textOrange{
+	color: #ff8500;
+}
+
+#textBlue{
+	color: #5565b5;
+}
+  
+
+
+.flex-title-and-info-textbox h1{
+	text-shadow: .2rem .2rem gray;
+	font-size: 5rem;
+	padding: 0;
+	margin: 0;
+	position: relative;
+	  transform: scale(1, .825);
+	-webkit-transform: scale(1, .825); /* Safari and Chrome */
+	-moz-transform: scale(1, .825); /* Firefox */
+	-ms-transform: scale(1, .825); /* IE 9+ */
+	-o-transform: scale(1, .825); /* Opera */
+}
+
+
+.flex-title-and-info-textbox h2{
+	text-shadow: .05rem .05rem gray;
+	font-style: bold;
+	font-size: 2rem;
+	padding: 0;
+	margin: 0;
+}
+
+
+.flex-title-and-info-textbox h3{
+	text-shadow: .05rem .05rem gray;
+
+	font-size: 1.5rem;
+	padding: 0;
+	margin: 0;
+}
+
+
+.flex-title-info-description-container{
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+}
+
+
+.flex-title-info-description-container p{
+	font-size: 1.15rem;
+	padding: 0;
+	margin: 0;
+}
+
+
+.landscape-title-and-info-container h3{
+		text-shadow: .05rem .05rem gray;
+	font-family: Jost;
+	font-size: 1.5rem;
+	padding: 1;
+	margin: 0;
+}
+
+.landscape-title-and-info-container p{
+			text-shadow: .05rem .05rem gray;
+	font-family: Jost;
+	font-size: 1.15rem;
+	padding: 1;
+	margin: 0;
+}
